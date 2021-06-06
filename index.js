@@ -16,7 +16,7 @@ mongoose.connect(process.env.DB_CONNECT,
 app.use(express.urlencoded({ extended: true }));
 app.use(require('./Routes'));
 
-
-app.listen(8001, () => {
+port = process.env.PORT || 8001
+app.listen(port, () => {
     console.log("Server is up and running on port 8001");
 })
